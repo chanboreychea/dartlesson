@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+//create constructor fromJson
 class Person {
   String? name;
   int? age;
@@ -67,5 +68,21 @@ class Student {
     name = cname;
     age = cage;
     rollNumber = crollNumber;
+  }
+}
+
+// super with constructor
+class Employee {
+  // Constructor
+  Employee(String name, double salary) {
+    print("Employee constructor");
+    print("Name: $name");
+    print("Salary: $salary");
+  }
+}
+class Manager extends Employee {
+  // Constructor
+  Manager(String name, double salary) : super(name, salary) {
+    print("Manager constructor");
   }
 }
